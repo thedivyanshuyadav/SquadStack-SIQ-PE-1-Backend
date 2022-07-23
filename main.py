@@ -105,18 +105,15 @@ class ParkingLot:
         msg += f"Car with vehicle registration number \"{reg_no}\" has been parked at slot number {slot_no}. "
       self.out(msg)
 
+# Parking Lot
+parking_lot = ParkingLot()
 
 # Create or Reset output.txt
 with open('output.txt','w+'):pass
 
-# Parking Lot
-
 # Read commands from input.txt
 with open('input.txt','r') as f:
   commands = list(map(lambda line:line.replace('\n',''),f.readlines()))
-
-  
-parking_lot = ParkingLot()
 
 # Perform operations for each command
 for command in commands:
